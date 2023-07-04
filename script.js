@@ -67,23 +67,20 @@ class movie{
 
 class uberPriceCalculate{
 
-constructor(distance,farePerKm,getfare){
-  this.distance=distance;
-  this.farePerKm=farePerKm;
- this.getfare=function(distance,farePerKm){
-  return distance*farePerKm;
- }
- getfare(this.distance,this.farePerKm)
+constructor(km){
+  this.km=km;
+  this.price=this.km*5;
+}
+
+  getPrice(){
+    return `Charges for the Ride is = ${this.price}`
+  }
+
 }
 
 
- 
-}
-
-
-let firstRide=new uberPriceCalculate(10,5);
-
-console.log(firstRide)
+let ride_1=new uberPriceCalculate(50)
+console.log(ride_1.getPrice())
 
 
 
